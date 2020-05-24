@@ -1,7 +1,4 @@
 rootProject.name = 'inspiration'
 
 include ':base_spring_boot_project'
-
-ProjectDescriptor base_spring_boot_project = project(':base_spring_boot_project')
-base_spring_boot_project.projectDir = new File('../base_spring_boot_project')
-base_spring_boot_project.buildFileName = 'export.gradle'
+project(':base_spring_boot_project').setBuildFileName('export.gradle')

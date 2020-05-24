@@ -1,0 +1,7 @@
+/.idea/
+/build/
+/classes/
+/generated/
+/tmp/
+/errors.log
+/.gitignore

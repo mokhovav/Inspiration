@@ -1,27 +1,13 @@
-
-
-
-
-
 plugins {
     id 'org.springframework.boot' version '2.2.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
-    /*The Maven Publish Plugin provides the ability to publish build artifacts to an Apache Maven repository.
-     * A module published to a Maven repository can be consumed by Maven, Gradle and other tools
-     * that understand the Maven repository format.
-     */
-    //id 'maven-publish'
 }
-
 group 'com.mokhovav'
 version '0.1'
-
 sourceCompatibility = 1.8
 
-
-
- configurations {
+configurations {
      developmentOnly
      runtimeClasspath {
          extendsFrom developmentOnly
@@ -32,16 +18,17 @@ repositories {
     mavenCentral()
 }
 
+
 sourceSets {
     main {
         java {
-            srcDir("..\\base_spring_boot_project\\src\\main\\java")
+            srcDir("\\base_spring_boot_project\\src\\main\\java")
         }
     }
 
     test {
         java {
-            srcDir("..\\base_spring_boot_project\\src\\test\\java")
+            srcDir("\\base_spring_boot_project\\src\\test\\java")
         }
     }
 }
@@ -51,7 +38,6 @@ springBoot {
 }
 
 dependencies {
-    implementation 'com.mokhovav:base_spring_boot_project'
     compile project(':base_spring_boot_project')
     compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter'
