@@ -5,6 +5,10 @@
 # MAINTAINER mohovav
 ###################################################################################################
 
+FROM alpine/git:v2.24.3 as gitImage
+WORKDIR /home/gitProjects/base_spring_boot_project
+RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./
+
 ###################################################################################################
 # defines the basic image for starting the container building process
 # openjdk:11.0.4-jdk-slim - base image
@@ -32,7 +36,7 @@ RUN ./mainproject/gradlew --build-cache --no-daemon
 
 # copy all sources and build the project
 COPY ./ ./mainproject
-
+COPY --from=gitImage /home/gitProjects ./
 # copy hibernate.xml from production
 #COPY ./src/main/resources/production/ ./src/main/resources/
 # clean package - delete of all artifacts created during the assembly process

@@ -4,11 +4,11 @@
     <bytecodeTargetLevel>
       <module name="base_spring_boot_project.main" target="1.8" />
       <module name="base_spring_boot_project.test" target="1.8" />
-      <module name="com.mokhovav.inspiration.base_spring_boot_project" target="1.8" />
+      <module name="com.mokhovav.inspiration.base_spring_boot_project.main" target="1.8" />
+      <module name="com.mokhovav.inspiration.base_spring_boot_project.test" target="1.8" />
       <module name="inspiration.ba" target="1.8" />
       <module name="inspiration.babase_spring_boot_project" target="1.8" />
-      <module name="inspiration.base_spring_boot_project.main" target="1.8" />
-      <module name="inspiration.base_spring_boot_project.test" target="1.8" />
+      <module name="inspiration.base_spring_boot_project" target="1.8" />
       <module name="inspiration.classpa" target="1.8" />
     </bytecodeTargetLevel>
   </component>

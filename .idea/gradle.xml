@@ -8,8 +8,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$/../base_spring_boot_project" />
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/base_spring_boot_project" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
