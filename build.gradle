@@ -18,13 +18,16 @@ repositories {
     mavenCentral()
 }
 
-
 sourceSets {
     main {
         java {
             srcDir("..\\base_spring_boot_project\\src\\main\\java")
         }
+        resources {
+            srcDir ("..\\base_spring_boot_project\\src\\main\\resources")
+        }
     }
+
 
     test {
         java {
@@ -39,6 +42,7 @@ springBoot {
 
 dependencies {
     compile project(':base_spring_boot_project')
+    implementation 'com.mokhovav:base_spring_boot_project'
     compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'

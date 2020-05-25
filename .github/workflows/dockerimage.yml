@@ -15,6 +15,6 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: mokhovav/inspirtion:inspirtion
+          name: mokhovav/inspirtion:0.1
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
