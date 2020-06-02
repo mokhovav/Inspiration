@@ -33,12 +33,6 @@ Inspiration = function () {
     /*****************************************************************************/
 
     /*****************************************************************************/
-    function convertDataToObject (text) {
-        return JSON.parse(text);
-    }
-    /*****************************************************************************/
-
-    /*****************************************************************************/
     // Functions for drawing simple lines
     function drawLine(context, fromX, fromY, toX, toY, color = "black", thickness = 1) {
         let ctx = context.getContext();
@@ -170,26 +164,6 @@ Inspiration = function () {
     }
     /*****************************************************************************/
 
-    /*****************************************************************************/
-    // Functions for sending and receiving messages using the POST method
-    function sendPostRequest(context, address = "/", message, func) {
-        let xmlHttp;
-        if (window.XMLHttpRequest) {
-            // code for modern browsers
-            xmlHttp = new XMLHttpRequest();
-        } else {
-            // code for old IE browsers
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlHttp.open("POST", address + "/" + JSON.stringify(message), true);
-        xmlHttp.send();
-        xmlHttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                func(context, this.responseText);
-            }
-        }
-    }
-    /*****************************************************************************/
     return {
         Context,
         drawLine,
@@ -198,9 +172,7 @@ Inspiration = function () {
         drawRectangle,
         drawRectangles,
         drawCircles,
-        sendPostRequest,
-        drawItems,
-        convertDataToObject
+        drawItems
     }
 }();
 

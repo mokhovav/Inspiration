@@ -1,6 +1,5 @@
 package com.mokhovav.inspiration.item;
 
-import com.mokhovav.base_spring_boot_project.baseClasses.BaseEntity;
 import com.mokhovav.inspiration.field.Field;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -10,9 +9,10 @@ import java.util.Map;
 
 @Component
 @Lazy
-public class Item  extends BaseEntity {
+public class Item{
     private Map<String, String> properties;
     private Field field;
+    private String name;
 
     public Item() {
         this.properties = new HashMap<>();
@@ -46,5 +46,13 @@ public class Item  extends BaseEntity {
 
     public void addProperty(String name, String value) {
         properties.put(name,value);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -1,15 +1,17 @@
 package com.mokhovav.inspiration.field;
 
-import com.mokhovav.base_spring_boot_project.baseClasses.BaseEntity;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
 @Lazy
-public class Field extends BaseEntity {
+public class Field {
     private Map<String, String> properties;
+
+    private String name;
 
     public Field() {
         properties = new HashMap<>();
@@ -35,5 +37,13 @@ public class Field extends BaseEntity {
 
     public void setProperties(Map<String, String> properties) {
         this.properties = properties;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

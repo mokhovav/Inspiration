@@ -1,16 +1,16 @@
 package com.mokhovav.inspiration.link;
 
-import com.mokhovav.base_spring_boot_project.baseClasses.BaseEntity;
 import com.mokhovav.inspiration.field.Field;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
 @Lazy
-public class Link extends BaseEntity {
+public class Link{
     private Field firstField;
     private Field secondField;
     private Direction direction;
+    private String name;
 
     public Link() {
     }
@@ -44,5 +44,13 @@ public class Link extends BaseEntity {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

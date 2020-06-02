@@ -1,6 +1,5 @@
 package com.mokhovav.inspiration.dice;
 
-import com.mokhovav.base_spring_boot_project.baseClasses.BaseEntity;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
@@ -9,8 +8,10 @@ import java.util.List;
 
 @Component
 @Lazy
-public class Dice extends BaseEntity {
+public class Dice {
     private List<Integer> values;
+
+    private String name;
 
     public Dice() {
         this.values = new ArrayList<>();
@@ -31,5 +32,13 @@ public class Dice extends BaseEntity {
 
     public void addValue(int value){
         values.add(new Integer(value));
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
