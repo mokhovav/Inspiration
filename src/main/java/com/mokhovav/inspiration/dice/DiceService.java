@@ -1,13 +1,10 @@
 package com.mokhovav.inspiration.dice;
 
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
-import com.mokhovav.base_spring_boot_project.exception.ValidException;
+import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.inspiration.board.BoardFileData;
-import com.mokhovav.inspiration.field.Field;
-import com.mokhovav.inspiration.item.Item;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

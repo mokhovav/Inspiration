@@ -2,7 +2,7 @@ package com.mokhovav.inspiration.board;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
-import com.mokhovav.base_spring_boot_project.exception.ValidException;
+import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.inspiration.dice.DiceService;
 import com.mokhovav.inspiration.field.Field;
 import com.mokhovav.inspiration.field.FieldService;

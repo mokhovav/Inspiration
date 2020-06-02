@@ -1,7 +1,7 @@
 package com.mokhovav.inspiration.link;
 
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
-import com.mokhovav.base_spring_boot_project.exception.ValidException;
+import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.inspiration.board.BoardFileData;
 import com.mokhovav.inspiration.field.Field;
 import com.mokhovav.inspiration.field.FieldService;

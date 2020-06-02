@@ -2,7 +2,7 @@ package com.mokhovav.inspiration.field;
 
 
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
-import com.mokhovav.base_spring_boot_project.exception.ValidException;
+import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.inspiration.board.BoardFileData;
 import org.springframework.stereotype.Service;
 
