@@ -22,7 +22,6 @@ sourceSets {
         }
     }
 
-
     test {
         java {
             srcDir("..\\base_spring_boot_project\\src\\test\\java")
@@ -45,6 +44,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
     implementation 'org.springframework.security:spring-security-crypto'
+
+   /* implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.webjars:webjars-locator-core'
+    implementation 'org.webjars:sockjs-client:1.1.2'
+    implementation 'org.webjars:stomp-websocket:2.3.3-1'
+    implementation 'org.webjars:bootstrap:4.5.0'
+    implementation 'org.webjars:jquery:3.5.1'/**/
 
     implementation 'org.hibernate:hibernate-core'
 
