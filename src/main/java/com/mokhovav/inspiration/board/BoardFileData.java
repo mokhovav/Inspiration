@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @Lazy
@@ -89,4 +90,5 @@ public class BoardFileData {
     public void setItemsPropertiesList(List<String[]> itemsPropertiesList) {
         this.itemsPropertiesList = itemsPropertiesList;
     }
+
 }

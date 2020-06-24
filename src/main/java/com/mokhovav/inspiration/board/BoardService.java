@@ -125,6 +125,21 @@ public class BoardService {
     }
 
     @Tracking
+    public Board getBoardFromBoardFileData(BoardFileData boardFileData) throws ValidException {
+        Board board = new Board(fieldService, this, linkService, diceService, logger);
+        /* Create list of fields */
+        board.setFieldList(fieldService.getListOfFieldsFromFile(boardFileData));
+        /* Create list of links */
+        board.setLinkList(linkService.getListOfLinksFromFile(boardFileData, board.getFieldList()));
+        /* Create list of items */
+        board.setItemList(itemService.getListOfItemsFromFile(boardFileData, board.getFieldList()));
+        /* Create list of dices */
+        board.setDiceList(diceService.getListOfDicesFromFile(boardFileData));
+        return board;
+    }
+
+
+    @Tracking
     public int makeAMove(Board board, String itemName, int steps) throws ValidException {
         Item item = itemService.getItemByName(board.getItemList(), itemName);
         if (item == null) throw new ValidException("BOARD: The item does not exist");
@@ -139,6 +154,14 @@ public class BoardService {
             count++;
         }
         return count;
+    }
+
+    @Tracking
+    public BoardFileData makeAMove(BoardFileData boardFileData, String itemName, int steps) throws ValidException {
+        Board board = getBoardFromBoardFileData(boardFileData);
+        makeAMove(board, itemName, steps);
+        boardFileData = convertToBoardFileData(board);
+        return  boardFileData;
     }
 
     @Tracking

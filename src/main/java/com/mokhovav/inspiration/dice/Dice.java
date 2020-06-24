@@ -10,8 +10,8 @@ import java.util.List;
 @Lazy
 public class Dice {
     private List<Integer> values;
-
     private String name;
+    private int value;
 
     public Dice() {
         this.values = new ArrayList<>();
@@ -20,6 +20,7 @@ public class Dice {
     public Dice(String name) {
         this.name = name;
         this.values = new ArrayList<>();
+        value = 0;
     }
 
     public List<Integer> getValues() {
@@ -40,5 +41,13 @@ public class Dice {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }
